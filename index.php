@@ -20,7 +20,8 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Ajax</h1>
+        <h1>Lista degli Eventi</h1>
+        <div class="eventi"></div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
@@ -40,9 +41,14 @@
         $.ajax("listaeventi.php")
           .done(function(data) {
             var eventi = JSON.parse(data);
-            console.log(eventi);
+            // console.log(eventi);
+
             // Inserire i dati nella pagina
-            // 
+            var i;
+            for (i=0; i<eventi.length; i++) {
+              var elemento = $("<h1>").html(eventi[i].Nome);
+              $(".eventi").append(elemento);
+            }
           })
           .fail(function() {
             alert( "error" );

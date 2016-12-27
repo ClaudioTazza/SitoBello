@@ -4,19 +4,36 @@ class DataLoader {
   }
 
   loadData(target) {
+    const _this = this;
+
+    if (!this.url) {
+      this.createPage(target);
+      return;
+    }
+
     $.ajax(this.url)
       .done(function (data) {
-        var jsonData = JSON.parse(data);
-        this.createPage(target, jsonData);
+        const jsonData = JSON.parse(data);
+        _this.createPage(target, jsonData);
       })
       .fail(function () {
-        alert('error');
+        alert('errore nel caricamento dei dati');
       });
   }
 }
 
 class ListaEventi extends DataLoader {
   createPage(target, jsonData) {
-    target.html(jsonData);
+    let i;
+    for (i = 0; i < jsonData.length; i++) {
+      const elemento = $('<h4>').html(jsonData[i].Nome);
+      target.append(elemento);
+    }
+  }
+}
+
+class PaginaVuota extends DataLoader {
+  createPage(target) {
+    target.append($('<h1>').html('Pagina Vuota'));
   }
 }

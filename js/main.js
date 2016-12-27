@@ -6,9 +6,17 @@ $(document).ready(function () {
 });
 
 function menuHandler(e) {
-  switch($(e.target).data('page')) {
+  let page;
+
+  switch ($(e.target).data('page')) {
     case 'menu-1':
       page = new ListaEventi('listaeventi.php');
+      break;
+    case 'menu-2':
+      page = new PaginaVuota(null);
+      break;
+    case 'menu-3':
+      page = new PaginaVuota(null);
       break;
     default:
       page = null;
@@ -19,7 +27,6 @@ function menuHandler(e) {
 }
 
 function router(page) {
-  console.log(page.url);
   const $main = $('main');
   $main.html('');
   page.loadData($main);

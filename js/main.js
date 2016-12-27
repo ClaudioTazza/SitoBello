@@ -6,5 +6,21 @@ $(document).ready(function () {
 });
 
 function menuHandler(e) {
-  console.log($(e.target).data('page'));
+  switch($(e.target).data('page')) {
+    case 'menu-1':
+      url = 'listaeventi.php';
+      break;
+    default:
+      url = null;
+      break;
+  }
+
+  if (url) router(new DataLoader(url));
+}
+
+function router(page) {
+  console.log(page.url);
+  const $main = $('main');
+  $main.html('');
+  $main.html(page.url);
 }

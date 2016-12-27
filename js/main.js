@@ -8,19 +8,19 @@ $(document).ready(function () {
 function menuHandler(e) {
   switch($(e.target).data('page')) {
     case 'menu-1':
-      url = 'listaeventi.php';
+      page = new ListaEventi('listaeventi.php');
       break;
     default:
-      url = null;
+      page = null;
       break;
   }
 
-  if (url) router(new DataLoader(url));
+  if (page) router(page);
 }
 
 function router(page) {
   console.log(page.url);
   const $main = $('main');
   $main.html('');
-  $main.html(page.url);
+  page.loadData($main);
 }

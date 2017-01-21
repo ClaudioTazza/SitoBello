@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="eventiApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,42 +22,17 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <nav>
-          <ul>
-            <li class="nav-item" data-page="menu-1">Menu 1</li>
-            <li class="nav-item" data-page="menu-2">Menu 2</li>
-            <li class="nav-item" data-page="menu-3">Menu 3</li>
-          </ul>
-        </nav>
-
         <h1>Lista degli Eventi</h1>
         <p><img src="http://lorempixel.com/400/200/technics"></p>
 
-        <main>
-        </main>
-
-        <div class="eventi"></div>
+        <lista-eventi></lista-eventi>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/dataloader.js"></script>
-        <script src="js/main.js"></script>
-
-        <script>
-        /*
-        var evento = {
-          ID: 1,
-          Nome: "Caricamento Dati",
-          Luogo: "Casa",
-          Data: "2016-10-04"
-        };
-        */
-
-        /* pagina iniziale */
-        const page = new ListaEventi('listaeventi.php');
-        router(page);
-        </script>
+        <script src="js/app.module.js"></script>
+        <script src="js/lista-eventi/lista-eventi.module.js"></script>
+        <script src="js/lista-eventi/lista-eventi.component.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

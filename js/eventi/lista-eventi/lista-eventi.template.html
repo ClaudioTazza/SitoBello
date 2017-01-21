@@ -2,9 +2,11 @@
 
 <ul class="eventi">
   <li class="evento" ng-repeat="evento in $ctrl.eventi | orderBy: -$ctrl.ordProp">
+    <a href="#!/commenti/{{evento.ID}}">
     <span class="evento-nome">{{evento.Nome}}</span>
     <span class="evento-luogo">{{evento.Luogo}}</span>
     <span class="evento-data">{{evento.Data}}</span>
     <img src="http://lorempixel.com/600/200/technics/{{evento.ID%10}}">
+    </a>
   </li>
 </ul>

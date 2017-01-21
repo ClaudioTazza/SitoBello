@@ -1,7 +1,7 @@
 angular.
-  module('listaEventi').
+  module('eventi').
   component('listaEventi', {
-    templateUrl: 'js/lista-eventi/lista-eventi.template.html',
+    templateUrl: 'js/eventi/lista-eventi/lista-eventi.template.html',
     controller: function ($http) {
       var self = this;
       //self.ordProp = 'Nome';

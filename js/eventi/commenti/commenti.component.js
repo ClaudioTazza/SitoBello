@@ -1,7 +1,7 @@
 angular.
-  module('commenti').
+  module('eventi').
   component('commenti', {
-    templateUrl: 'js/commenti/commenti.template.html',
+    templateUrl: 'js/eventi/commenti/commenti.template.html',
     controller: ['$http', '$routeParams', function ($http, $routeParams) {
       var self = this;
 

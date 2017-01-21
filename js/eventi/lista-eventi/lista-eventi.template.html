@@ -1,3 +1,10 @@
-<ul>
-  <li ng-repeat="evento in $ctrl.eventi | orderBy: -$ctrl.ordProp">{{evento.Nome}} - {{evento.Luogo}} - {{evento.Data}}</li>
+<h1>Lista degli Eventi</h1>
+
+<ul class="eventi">
+  <li class="evento" ng-repeat="evento in $ctrl.eventi | orderBy: -$ctrl.ordProp">
+    <span class="evento-nome">{{evento.Nome}}</span>
+    <span class="evento-luogo">{{evento.Luogo}}</span>
+    <span class="evento-data">{{evento.Data}}</span>
+    <img src="http://lorempixel.com/600/200/technics/{{evento.ID%10}}">
+  </li>
 </ul>

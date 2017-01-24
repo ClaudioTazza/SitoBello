@@ -1,11 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="" ng-app="eventiApp">
+<html class="no-js" lang="it" ng-app="eventiApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Eventi Matese</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
@@ -23,17 +26,16 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header>
-          <a href="#!/">
-          <h1>Eventi</h1>
-          </a>
-          <h2>ISISS Piedimonte Matese</h2>
-          <hr>
-        </header>
+        <div class="container">
+          <header class="text-center">
+            <a href="#!/"><h2>Eventi</h2></a>
+            <h4>ISISS Piedimonte Matese</h4>
+          </header>
 
-        <main>
-          <div ng-view></div>
-        </main>
+          <main>
+            <div ng-view></div>
+          </main>
+        </div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

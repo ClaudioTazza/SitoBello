@@ -1,4 +1,14 @@
-<h1>Commenti</h1>
-<ul>
-  <li ng-repeat="commento in $ctrl.commenti">{{commento.AuthorFullName}} - {{commento.Body}}</li>
-</ul>
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+    <h1 class="text-center">Commenti</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="panel commento col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3" ng-repeat="commento in $ctrl.commenti">
+      <div class="panel-body text-center">
+        <h3 class="commento-body">{{commento.Body}}</h3>
+        <h4 class="commento-author">{{commento.AuthorFullName}}</h4>
+      </div>
+  </div>
+</div>

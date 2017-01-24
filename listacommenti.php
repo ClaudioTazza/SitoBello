@@ -6,7 +6,7 @@ require_once('config.php');
 $evId = $_GET['evId'];
 
 // check query
-$query = "SELECT * FROM Commenti WHERE EventiId=$evId";
+$query = "SELECT * FROM Commenti WHERE EventiId=".$evId;
 
 $stmt = mysqli_prepare($link, $query);
 mysqli_stmt_execute($stmt);

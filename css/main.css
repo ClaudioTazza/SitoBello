@@ -94,15 +94,51 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.evento {
+  margin-bottom: 5px;
+}
 
-body {
-  background-color: white;
+.evento img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 a {
   color: black;
   text-decoration: none;
 }
+
+.commento-body:before {
+  content: open-quote;
+}
+
+.commento-body:after {
+  content: close-quote;
+}
+
+.commento-body {
+  background-color: #ddd;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.commento-author {
+  margin-top: 15px;
+  text-align: right;
+}
+
+/*
+body {
+  background-color: white;
+}
+
+
 
 header h1, header h2, main h1 {
   text-align: center;
@@ -173,11 +209,7 @@ main {
   font-size: 1em;
 }
 
-
-
-
-
-
+*/
 
 /* ==========================================================================
    Helper classes

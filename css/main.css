@@ -94,22 +94,47 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.eventi {
+  overflow: hidden;
+}
 
+.evento {
+  overflow: hidden;
+}
 
+.evento img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0.3;
+  z-index: 0;
+}
 
+.evento-a {
+  color: black;
+  text-decoration: none;
+  opacity: 1;
+}
 
+.commento-body:before {
+  content: open-quote;
+}
 
+.commento-body:after {
+  content: close-quote;
+}
 
+.commento-body {
+  background-color: #e0e0e0;
+  padding: 30px;
+  border-radius: 10px;
+}
 
-
-
-
-
-
-
-
-
-
+.commento-author {
+  margin-top: 15px;
+  text-align: right;
+}
 
 /* ==========================================================================
    Helper classes

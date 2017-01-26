@@ -8,6 +8,8 @@ angular.
       var evId = $routeParams.eventoId;
 
       $http.get('listacommenti.php', { params: {'evId': evId} }).then(function(response) {
+        self.evento = response.data.shift();
+        console.log(self.evento);
         self.commenti = response.data;
       });
     }],

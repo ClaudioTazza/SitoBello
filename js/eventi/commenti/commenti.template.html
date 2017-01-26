@@ -1,6 +1,15 @@
-<div class="row">
+<div class="row eventi">
   <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-    <h1 class="text-center">Commenti</h1>
+    <div class="panel">
+      <div class="panel-body text-center">
+        <div class="evento">
+          <img class="" src="http://lorempixel.com/400/200/technics/{{$ctrl.evento.ID%10}}">
+          <h2 class="evento-nome">{{$ctrl.evento.Nome}}</h2>
+          <h3 class="evento-luogo">{{$ctrl.evento.Luogo}}</h3>
+          <h4 class="evento-data">{{$ctrl.evento.Data}}</h4>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

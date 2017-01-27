@@ -7,10 +7,10 @@ $stmt = mysqli_prepare($link, $query);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_bind_result($stmt, $ID, $Nome, $Luogo, $Data);
 
-$result = [];
+$result = array();
 
 while (mysqli_stmt_fetch($stmt)) {
-  array_push($result, ["ID" => $ID, "Nome" => $Nome, "Luogo" => $Luogo, "Data" => $Data]);
+  array_push($result, array("ID" => $ID, "Nome" => $Nome, "Luogo" => $Luogo, "Data" => $Data));
 }
 
 mysqli_stmt_close($stmt);
